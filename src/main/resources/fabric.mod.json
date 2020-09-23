@@ -1,35 +1,41 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "rstoneworks",
   "version": "${version}",
 
-  "name": "Example Mod",
+  "name": "Stonework Mod",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
-    "Me!"
+    "Roman Gräf"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT",
+  "icon": "assets/rstoneworks/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleModKt::init"
+      "com.romangraef.rstoneworks.RStoneworksKt::init"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "rstoneworks.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.8.7",
     "fabric": "*",
     "fabric-language-kotlin": "*",
     "minecraft": "1.16.x"
+  },
+  "custom": {
+    "waila:plugins": {
+      "id": "rstoneworks:hwyla_plugin",
+      "initializer": "com.romangraef.rstoneworks.compat.HwylaPlugin"
+    }
   },
   "suggests": {
     "flamingo": "*"

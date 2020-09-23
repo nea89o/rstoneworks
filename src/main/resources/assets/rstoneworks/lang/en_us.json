@@ -1,0 +1,6 @@
+{
+  "block.rstoneworks.factory": "Factory",
+  "itemGroup.rstoneworks.default": "Romans Stoneworks",
+  "item.rstoneworks.speed_upgrade": "Factory Upgraed: Speed",
+  "hwyla.rstoneworks.upgrade.speed": "Factory Speed: %d"
+}
