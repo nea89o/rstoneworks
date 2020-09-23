@@ -9,7 +9,7 @@ import net.minecraft.util.Identifier
 // For support join https://discord.gg/v6v4pMv
 object RStoneworks {
 	val MODID = "rstoneworks"
-	val ITEM_GROUP = FabricItemGroupBuilder.build(identifier("general")) { ItemStack(RBlocks.STONEWORK_FACTORY) }
+	val ITEM_GROUP = FabricItemGroupBuilder.build(identifier("general")) { ItemStack(RBlocks.COBBLE_FACTORY) }
 	fun identifier(path: String) = Identifier(MODID, path)
 }
 

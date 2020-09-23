@@ -1,6 +1,7 @@
 {
-  "block.rstoneworks.factory": "Factory",
+  "block.rstoneworks.cobble_factory": "Cobble Factory",
+  "block.rstoneworks.triple_packager_factory": "Triple Packaging Factory",
   "itemGroup.rstoneworks.default": "Romans Stoneworks",
-  "item.rstoneworks.speed_upgrade": "Factory Upgraed: Speed",
+  "item.rstoneworks.speed_upgrade": "Factory Upgrade: Speed",
   "hwyla.rstoneworks.upgrade.speed": "Factory Speed: %d"
 }

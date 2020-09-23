@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "id": "rstoneworks",
   "version": "${version}",
-
   "name": "Stonework Mod",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
@@ -12,10 +11,9 @@
     "homepage": "https://fabricmc.net/",
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
-
+  "accessWidener": "rstoneworks.accesswidener",
   "license": "MIT",
   "icon": "assets/rstoneworks/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [

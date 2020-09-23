@@ -1,6 +1,10 @@
 package com.romangraef.rstoneworks.compat
 
-import com.romangraef.rstoneworks.blocks.entity.FactoryBlockEntity
+import com.romangraef.rstoneworks.blocks.entity.CobbleFactoryBlockEntity
+import com.romangraef.rstoneworks.blocks.entity.TriplePackagerFactoryBlockEntity
+import com.romangraef.rstoneworks.blocks.entity.util.BaseFactoryEntity
+import com.romangraef.rstoneworks.blocks.util.BaseFactoryBlock
+import com.romangraef.rstoneworks.registry.RBlocks
 import mcp.mobius.waila.api.IComponentProvider
 import mcp.mobius.waila.api.IDataAccessor
 import mcp.mobius.waila.api.IPluginConfig
@@ -11,7 +15,6 @@ import mcp.mobius.waila.api.RenderableTextComponent
 import mcp.mobius.waila.api.TooltipPosition
 import net.minecraft.block.entity.BlockEntity
 import net.minecraft.item.ItemStack
-import net.minecraft.item.Items
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.server.network.ServerPlayerEntity
 import net.minecraft.text.Text
@@ -25,28 +28,29 @@ class HwylaPlugin : IWailaPlugin {
 		iRegistrar.registerComponentProvider(
 			FactoryOutputProvider,
 			TooltipPosition.BODY,
-			FactoryBlockEntity::class.java
+			BaseFactoryEntity::class.java
 		)
-		iRegistrar.registerBlockDataProvider(FactoryOutputProvider, FactoryBlockEntity::class.java)
+		iRegistrar.registerBlockDataProvider(FactoryOutputProvider, BaseFactoryEntity::class.java)
 	}
 
 	object FactoryOutputProvider : IComponentProvider, IServerDataProvider<BlockEntity> {
 
 		override fun appendBody(tooltip: MutableList<Text>, accessor: IDataAccessor, config: IPluginConfig?) {
 			super.appendBody(tooltip, accessor, config)
-			val be = FactoryBlockEntity()
+			val be = (accessor.block as BaseFactoryBlock).createBlockEntity(accessor.world)
 			be.fromTag(accessor.blockState, accessor.serverData)
 			tooltip.add(TranslatableText("hwyla.rstoneworks.upgrade.speed", be.workSpeed))
 			tooltip.add(
 				RenderableTextComponent(
+					be.inputStack.asRenderableText,
 					progressBar(be.workTime, be.workAmount),
-					ItemStack(Items.COBBLESTONE, be.cobbleCount).asRenderableText
+					be.outputStack.asRenderableText
 				)
 			)
 		}
 
 		override fun appendServerData(p0: CompoundTag?, p1: ServerPlayerEntity?, p2: World?, p3: BlockEntity?) {
-			p3 as FactoryBlockEntity
+			p3 as BaseFactoryEntity
 			p3.toTag(p0!!)
 		}
 	}
