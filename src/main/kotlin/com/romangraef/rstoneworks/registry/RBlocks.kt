@@ -2,9 +2,11 @@ package com.romangraef.rstoneworks.registry
 
 import com.romangraef.rstoneworks.RStoneworks
 import com.romangraef.rstoneworks.blocks.CobbleFactoryBlock
+import com.romangraef.rstoneworks.blocks.CrushingFactoryBlock
 import com.romangraef.rstoneworks.blocks.DoublePackagerFactoryBlock
 import com.romangraef.rstoneworks.blocks.TriplePackagerFactoryBlock
 import com.romangraef.rstoneworks.blocks.entity.CobbleFactoryBlockEntity
+import com.romangraef.rstoneworks.blocks.entity.CrushingFactoryBlockEntity
 import com.romangraef.rstoneworks.blocks.entity.DoublePackagerFactoryBlockEntity
 import com.romangraef.rstoneworks.blocks.entity.TriplePackagerFactoryBlockEntity
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
@@ -37,6 +39,10 @@ object RBlocks : DelayedRegistry<Block>(RStoneworks.MODID) {
 		DoublePackagerFactoryBlock(DEFAULT_SETTINGS)
 	}
 
+	val CRUSHING_FACTORY by "crushing_factory" {
+		CrushingFactoryBlock(DEFAULT_SETTINGS)
+	}
+
 	object Entities : DefaultDelayedRegistry<BlockEntityType<*>>(Registry.BLOCK_ENTITY_TYPE, RStoneworks.MODID) {
 		val COBBLE_FACTORY_ENTITY by "cobble_factory" {
 			BlockEntityType.Builder.create(::CobbleFactoryBlockEntity, COBBLE_FACTORY).build(null)
@@ -46,6 +52,9 @@ object RBlocks : DelayedRegistry<Block>(RStoneworks.MODID) {
 		}
 		val DOUBLE_PACKAGER_FACTORY_ENTITY by "double_packager_factory" {
 			BlockEntityType.Builder.create(::DoublePackagerFactoryBlockEntity, DOUBLE_PACKAGER_FACTORY).build(null)
+		}
+		val CRUSHING_FACTORY_ENTITY by "crushing_factory"{
+			BlockEntityType.Builder.create(::CrushingFactoryBlockEntity, CRUSHING_FACTORY).build(null)
 		}
 	}
 }

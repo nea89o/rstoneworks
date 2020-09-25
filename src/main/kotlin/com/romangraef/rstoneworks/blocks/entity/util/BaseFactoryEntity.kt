@@ -17,7 +17,6 @@ abstract class BaseFactoryEntity(type: BlockEntityType<*>) : BaseBlockEntity(typ
 			Slot 2: Sides, Coal
 	*/
 	fun isValidInput(itemStack: ItemStack): Boolean {
-		println("Stack: $itemStack")
 		return !getOutputForInput(itemStack).isEmpty
 	}
 	abstract fun getOutputForInput(itemStack: ItemStack): ItemStack
