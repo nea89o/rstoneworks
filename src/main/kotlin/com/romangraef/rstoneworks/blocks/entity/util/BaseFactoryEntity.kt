@@ -39,10 +39,11 @@ abstract class BaseFactoryEntity(type: BlockEntityType<*>) : BaseBlockEntity(typ
 		fuelTime -= currentWorkSpeed
 		if (workTime >= workAmount) {
 			if (outputStack.isEmpty) outputStack = currentOutput
-			else outputStack.increment(1)
+			else outputStack.increment(currentOutput.count)
 			consumeInput()
 			workTime -= workAmount
 		}
+		markDirty()
 	}
 
 	open fun consumeInput() {

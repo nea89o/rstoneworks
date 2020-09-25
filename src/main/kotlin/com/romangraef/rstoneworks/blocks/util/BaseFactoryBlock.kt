@@ -8,11 +8,13 @@ import net.minecraft.block.BlockEntityProvider
 import net.minecraft.block.BlockState
 import net.minecraft.block.HorizontalFacingBlock
 import net.minecraft.entity.player.PlayerEntity
+import net.minecraft.inventory.Inventory
 import net.minecraft.item.ItemPlacementContext
 import net.minecraft.item.ItemStack
 import net.minecraft.state.StateManager
 import net.minecraft.util.ActionResult
 import net.minecraft.util.Hand
+import net.minecraft.util.ItemScatterer
 import net.minecraft.util.hit.BlockHitResult
 import net.minecraft.util.math.BlockPos
 import net.minecraft.util.math.Direction
@@ -28,6 +30,20 @@ abstract class BaseFactoryBlock(settings: Settings) : HorizontalFacingBlock(sett
 
 	override fun appendProperties(builder: StateManager.Builder<Block, BlockState>) {
 		builder.add(FACING)
+	}
+
+	override fun onStateReplaced(
+		state: BlockState,
+		world: World,
+		pos: BlockPos?,
+		newState: BlockState,
+		moved: Boolean
+	) {
+		if (!state.isOf(newState.block)) {
+			val blockEntity = world.getBlockEntity(pos) as BaseFactoryEntity
+			ItemScatterer.spawn(world, pos, blockEntity as Inventory?)
+			super.onStateReplaced(state, world, pos, newState, moved)
+		}
 	}
 
 	override fun onUse(
