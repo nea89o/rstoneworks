@@ -9,6 +9,7 @@ import com.romangraef.rstoneworks.blocks.entity.CobbleFactoryBlockEntity
 import com.romangraef.rstoneworks.blocks.entity.CrushingFactoryBlockEntity
 import com.romangraef.rstoneworks.blocks.entity.DoublePackagerFactoryBlockEntity
 import com.romangraef.rstoneworks.blocks.entity.TriplePackagerFactoryBlockEntity
+import com.romangraef.rstoneworks.blocks.util.BaseHorizontalBlock
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
 import net.minecraft.block.Block
 import net.minecraft.block.Material
@@ -29,6 +30,9 @@ object RBlocks : DelayedRegistry<Block>(RStoneworks.MODID) {
 			.hardness(4F)
 
 
+	val BASE_FACTORY by "base_factory" {
+		BaseHorizontalBlock(DEFAULT_SETTINGS)
+	}
 	val COBBLE_FACTORY by "cobble_factory" {
 		CobbleFactoryBlock(DEFAULT_SETTINGS)
 	}
@@ -38,7 +42,6 @@ object RBlocks : DelayedRegistry<Block>(RStoneworks.MODID) {
 	val DOUBLE_PACKAGER_FACTORY by "double_packager_factory" {
 		DoublePackagerFactoryBlock(DEFAULT_SETTINGS)
 	}
-
 	val CRUSHING_FACTORY by "crushing_factory" {
 		CrushingFactoryBlock(DEFAULT_SETTINGS)
 	}

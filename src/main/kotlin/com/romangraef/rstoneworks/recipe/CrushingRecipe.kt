@@ -10,6 +10,7 @@ import net.minecraft.recipe.RecipeSerializer
 import net.minecraft.recipe.RecipeType
 import net.minecraft.recipe.ShapedRecipe
 import net.minecraft.util.Identifier
+import net.minecraft.util.collection.DefaultedList
 import net.minecraft.world.World
 
 class CrushingRecipe(
@@ -28,6 +29,9 @@ class CrushingRecipe(
 	override fun getId(): Identifier = identifier
 	override fun getOutput(): ItemStack = _output.copy()
 	override fun getSerializer(): RecipeSerializer<*> = CrushingRecipeSerializer
+	override fun getPreviewInputs(): DefaultedList<Ingredient> = DefaultedList.of<Ingredient>().also {
+		it.add(input)
+	}
 
 	override fun getType(): RecipeType<*> = CrushingRecipeType
 }

@@ -3,34 +3,24 @@ package com.romangraef.rstoneworks.blocks.util
 import com.romangraef.rstoneworks.blocks.entity.util.BaseFactoryEntity
 import com.romangraef.rstoneworks.registry.RItems
 import net.fabricmc.fabric.api.registry.FuelRegistry
-import net.minecraft.block.Block
 import net.minecraft.block.BlockEntityProvider
 import net.minecraft.block.BlockState
-import net.minecraft.block.HorizontalFacingBlock
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.inventory.Inventory
-import net.minecraft.item.ItemPlacementContext
 import net.minecraft.item.ItemStack
-import net.minecraft.state.StateManager
 import net.minecraft.util.ActionResult
 import net.minecraft.util.Hand
 import net.minecraft.util.ItemScatterer
 import net.minecraft.util.hit.BlockHitResult
 import net.minecraft.util.math.BlockPos
-import net.minecraft.util.math.Direction
 import net.minecraft.world.BlockView
 import net.minecraft.world.World
 
-abstract class BaseFactoryBlock(settings: Settings) : HorizontalFacingBlock(settings), BlockEntityProvider {
-	init {
-		defaultState = stateManager.defaultState.with(FACING, Direction.NORTH)
-	}
+abstract class BaseFactoryBlock(settings: Settings) : BaseHorizontalBlock(settings), BlockEntityProvider {
+
 
 	abstract override fun createBlockEntity(world: BlockView): BaseFactoryEntity
 
-	override fun appendProperties(builder: StateManager.Builder<Block, BlockState>) {
-		builder.add(FACING)
-	}
 
 	override fun onStateReplaced(
 		state: BlockState,
@@ -81,8 +71,6 @@ abstract class BaseFactoryBlock(settings: Settings) : HorizontalFacingBlock(sett
 		}
 		return super.onUse(state, world, pos, player, hand, hit)
 	}
-
-	override fun getPlacementState(ctx: ItemPlacementContext): BlockState = defaultState.with(FACING, ctx.playerFacing)
 
 
 }

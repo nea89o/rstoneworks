@@ -44,7 +44,8 @@ dependencies {
     modRuntime("io.github.prospector:modmenu:${modmenu_version}") {
         exclude group: "net.fabricmc.fabric-api"
     }
-    modRuntime("me.shedaniel:RoughlyEnoughItems-api:${rei_version}")
+    modCompileOnly ("me.shedaniel:RoughlyEnoughItems-api:${rei_version}")
+    modRuntime("me.shedaniel:RoughlyEnoughItems:${rei_version}")
     modCompile "alexiil.mc.lib:libblockattributes-all:${libblock_version}"
     modCompile "mcp.mobius.waila:Hwyla:${hwyla_version}"
 }
@@ -73,7 +74,7 @@ tasks.withType(JavaCompile) {
 // if it is present.
 // If you remove this task, sources will not be generated.
 task sourcesJar(type: Jar, dependsOn: classes) {
-    classifier = "sources"
+    archiveClassifier.set("sources")
     from sourceSets.main.allSource
 }
 

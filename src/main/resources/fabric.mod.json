@@ -16,6 +16,9 @@
   "icon": "assets/rstoneworks/icon.png",
   "environment": "*",
   "entrypoints": {
+    "rei_plugins": [
+      "com.romangraef.rstoneworks.compat.rei.REIPlugin"
+    ],
     "main": [
       "com.romangraef.rstoneworks.RStoneworksKt::init"
     ]

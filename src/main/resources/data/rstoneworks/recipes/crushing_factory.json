@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OPO",
+    "OBO",
+    "OOO"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:cobblestone"
+    },
+    "P": {
+      "item": "minecraft:piston"
+    },
+    "B": {
+      "item": "rstoneworks:base_factory"
+    }
+  },
+  "result": {
+    "item": "rstoneworks:crushing_factory",
+    "count": 1
+  }
+}
+

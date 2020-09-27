@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OOO",
+    "WBL",
+    "OOO"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:cobblestone"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    },
+    "L": {
+      "item": "minecraft:lava_bucket"
+    },
+    "B": {
+      "item": "rstoneworks:base_factory"
+    }
+  },
+  "result": {
+    "item": "rstoneworks:cobble_factory",
+    "count": 1
+  }
+}
+

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OCO",
+    "OBO",
+    "OCO"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:cobblestone"
+    },
+    "C": {
+      "item": "minecraft:crafting_table"
+    },
+    "B": {
+      "item": "rstoneworks:base_factory"
+    }
+  },
+  "result": {
+    "item": "rstoneworks:triple_packager_factory",
+    "count": 1
+  }
+}
+
