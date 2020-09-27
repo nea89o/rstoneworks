@@ -3,9 +3,9 @@
   "block.rstoneworks.triple_packager_factory": "Triple Packaging Factory",
   "block.rstoneworks.double_packager_factory": "Double Packaging Factory",
   "block.rstoneworks.crushing_factory": "Crushing Factory",
+  "block.rstoneworks.hydrating_factory": "Hydrating Factory",
   "block.rstoneworks.base_factory": "Factory Base Block",
   "itemGroup.rstoneworks.default": "Romans Stoneworks",
   "item.rstoneworks.speed_upgrade": "Factory Upgrade: Speed",
-  "category.rstoneworks.crushing.name": "Crushing Factory",
   "hwyla.rstoneworks.upgrade.speed": "Factory Speed: %d"
 }

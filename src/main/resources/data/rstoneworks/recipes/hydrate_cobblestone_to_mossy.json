@@ -1,0 +1,10 @@
+{
+  "type": "rstoneworks:hydrating",
+  "input": {
+    "item": "minecraft:cobblestone"
+  },
+  "output": {
+    "item": "minecraft:mossy_cobblestone",
+    "count": 1
+  }
+}

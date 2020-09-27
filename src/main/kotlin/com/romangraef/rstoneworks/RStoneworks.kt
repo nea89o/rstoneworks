@@ -1,7 +1,9 @@
 package com.romangraef.rstoneworks
 
-import com.romangraef.rstoneworks.recipe.CrushingRecipeType
 import com.romangraef.rstoneworks.recipe.CrushingRecipeSerializer
+import com.romangraef.rstoneworks.recipe.CrushingRecipeType
+import com.romangraef.rstoneworks.recipe.HydratingRecipeSerializer
+import com.romangraef.rstoneworks.recipe.HydratingRecipeType
 import com.romangraef.rstoneworks.registry.RBlocks
 import com.romangraef.rstoneworks.registry.RItems
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder
@@ -20,6 +22,9 @@ object RStoneworks {
 fun init() {
 	Registry.register(Registry.RECIPE_SERIALIZER, RStoneworks.identifier("crushing"), CrushingRecipeSerializer)
 	Registry.register(Registry.RECIPE_TYPE, RStoneworks.identifier("crushing"), CrushingRecipeType)
+
+	Registry.register(Registry.RECIPE_SERIALIZER, RStoneworks.identifier("hydrating"), HydratingRecipeSerializer)
+	Registry.register(Registry.RECIPE_TYPE, RStoneworks.identifier("hydrating"), HydratingRecipeType)
 
 	RItems.registerAll()
 	RBlocks.registerAll()

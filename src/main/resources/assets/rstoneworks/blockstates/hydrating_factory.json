@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "rstoneworks:block/hydrating_factory"
+    },
+    "facing=east": {
+      "model": "rstoneworks:block/hydrating_factory",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "rstoneworks:block/hydrating_factory",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "rstoneworks:block/hydrating_factory",
+      "y": 270
+    }
+  }
+}

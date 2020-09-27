@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OOO",
+    "WBW",
+    "OOO"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:cobblestone"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    },
+    "B": {
+      "item": "rstoneworks:base_factory"
+    }
+  },
+  "result": {
+    "item": "rstoneworks:crushing_factory",
+    "count": 1
+  }
+}
+

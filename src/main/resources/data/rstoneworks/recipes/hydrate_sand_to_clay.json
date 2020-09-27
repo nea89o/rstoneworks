@@ -1,0 +1,10 @@
+{
+  "type": "rstoneworks:hydrating",
+  "input": {
+    "item": "minecraft:sand"
+  },
+  "output": {
+    "item": "minecraft:clay",
+    "count": 1
+  }
+}
