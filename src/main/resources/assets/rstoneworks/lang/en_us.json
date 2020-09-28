@@ -7,7 +7,7 @@
   "block.rstoneworks.smelting_factory": "Smelting Factory",
   "block.rstoneworks.base_factory": "Factory Base Block",
   "block.rstoneworks.tuovi_block": "~{Tuovi Block}~",
-  "itemGroup.rstoneworks.default": "Romans Stoneworks",
+  "itemGroup.rstoneworks.general": "Romans Stoneworks",
   "item.rstoneworks.speed_upgrade": "Factory Upgrade: Speed",
   "hwyla.rstoneworks.upgrade.speed": "Factory Speed: %d",
   "hwyla.rstoneworks.fuel": "Fuel Time: %d"
