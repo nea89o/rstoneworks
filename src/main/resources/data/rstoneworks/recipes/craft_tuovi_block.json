@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BMB",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:bedrock"
+    },
+    "M": {
+      "item": "rstoneworks:base_factory"
+    }
+  },
+  "result": {
+    "item": "rstoneworks:tuovi_block",
+    "count": 4
+  }
+}
+

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "rstoneworks:block/touvi_block"
+    }
+  }
+}

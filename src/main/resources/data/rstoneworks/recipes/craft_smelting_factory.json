@@ -1,23 +1,23 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "OOO",
-    "WBW",
-    "OOO"
+    "OFO",
+    "OBO",
+    "OFO"
   ],
   "key": {
     "O": {
       "item": "minecraft:cobblestone"
     },
-    "W": {
-      "item": "minecraft:water_bucket"
+    "F": {
+      "item": "minecraft:furnace"
     },
     "B": {
       "item": "rstoneworks:base_factory"
     }
   },
   "result": {
-    "item": "rstoneworks:hydrating_factory",
+    "item": "rstoneworks:smelting_factory",
     "count": 1
   }
 }
