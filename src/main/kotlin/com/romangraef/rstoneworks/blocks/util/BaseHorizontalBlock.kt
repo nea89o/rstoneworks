@@ -16,6 +16,6 @@ open class BaseHorizontalBlock(settings: Settings) : HorizontalFacingBlock(setti
 		builder.add(FACING)
 	}
 
-	override fun getPlacementState(ctx: ItemPlacementContext): BlockState = defaultState.with(FACING, ctx.playerFacing)
+	override fun getPlacementState(ctx: ItemPlacementContext): BlockState = defaultState.with(FACING, ctx.playerFacing.opposite)
 
 }
