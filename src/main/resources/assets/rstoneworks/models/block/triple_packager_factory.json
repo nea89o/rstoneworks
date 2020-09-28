@@ -2,7 +2,7 @@
   "parent": "minecraft:block/orientable_with_bottom",
   "textures": {
     "top": "rstoneworks:block/factory_top",
-    "front": "rstoneworks:block/factory_front",
+    "front": "rstoneworks:block/factory_triple",
     "side": "rstoneworks:block/factory_side",
     "bottom": "rstoneworks:block/factory_bottom"
   }
