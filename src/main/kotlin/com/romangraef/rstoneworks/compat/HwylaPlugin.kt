@@ -40,6 +40,7 @@ class HwylaPlugin : IWailaPlugin {
 			val be = (accessor.block as BaseFactoryBlock).createBlockEntity(accessor.world)
 			be.fromTag(accessor.blockState, accessor.serverData)
 			tooltip.add(TranslatableText("hwyla.rstoneworks.upgrade.speed", be.workSpeed))
+			tooltip.add(TranslatableText("hwyla.rstoneworks.fuel", be.fuelTime))
 			tooltip.add(
 				RenderableTextComponent(
 					be.inputStack.asRenderableText,

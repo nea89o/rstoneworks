@@ -6,6 +6,7 @@ import me.shedaniel.rei.api.EntryStack
 import me.shedaniel.rei.api.RecipeCategory
 import me.shedaniel.rei.api.widgets.Widgets
 import me.shedaniel.rei.gui.widget.Widget
+import net.minecraft.client.resource.language.I18n
 import net.minecraft.item.ItemConvertible
 import net.minecraft.util.Identifier
 
@@ -15,7 +16,7 @@ open class BaseRecipeCategory<T : BaseRecipeDisplay<*>>(
 ) : RecipeCategory<T> {
 	override fun getIdentifier(): Identifier = _identifier
 	override fun getLogo(): EntryStack = EntryStack.create(_logo)
-	override fun getCategoryName(): String = _logo.asItem().translationKey
+	override fun getCategoryName(): String = I18n.translate(_logo.asItem().translationKey)
 	override fun setupDisplay(recipeDisplay: T, bounds: Rectangle): MutableList<Widget> =
 		mutableListOf<Widget>().apply {
 			val startPoint = Point(bounds.centerX - 41, bounds.y + 10)
