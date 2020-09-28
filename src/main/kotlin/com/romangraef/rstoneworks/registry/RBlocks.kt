@@ -15,6 +15,7 @@ import com.romangraef.rstoneworks.blocks.entity.SmeltingFactoryBlockEntity
 import com.romangraef.rstoneworks.blocks.entity.TriplePackagerFactoryBlockEntity
 import com.romangraef.rstoneworks.blocks.util.BaseHorizontalBlock
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags
 import net.minecraft.block.Block
 import net.minecraft.block.BlockState
 import net.minecraft.block.Material
@@ -41,6 +42,7 @@ object RBlocks : DelayedRegistry<Block>(RStoneworks.MODID) {
 		get() = FabricBlockSettings
 			.of(Material.PISTON)
 			.hardness(4F)
+			.breakByTool(FabricToolTags.PICKAXES)
 
 
 	val BASE_FACTORY by "base_factory" {
